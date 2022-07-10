@@ -1,12 +1,6 @@
 from django.urls import path
-from django.http import HttpResponse
-
-
-def main_page(request):
-    print('Юзер на сайте')
-    return HttpResponse('Привет!')
-
+from polls import views
 
 urlpatterns = [
-    path('', main_page),
+    path('', views.main_page)
 ]
